@@ -1,0 +1,28 @@
+Để bắt đầu hành trình này, mình đã gặp một tiền bối cho mình một vài lời khuyên trước khi bước chân vào ngành này:
+- Tìm hiểu về Linux
+- Tìm hiểu về Metasploit
+- Và nâng cao hơn thì hãy tìm hiểu về Arch Linux
+
+Về Linux, ở môi trường Đại học mình đã sử dụng qua giao diện CLI. Điều nay cũng giúp mình làm quen nhanh chóng với Linux. Việc tìm hiểu về Linux khá là rộng nên mình sẽ học theo một chủ đề nhất định và ghi nhớ những câu lệnh trên Linux dễ hiểu nhất.
+
+Cuốn sách đầu tiên để mình tìm hiểu về Metasploit sẽ là "Metasploit - The penetration Tester's Guide"
+
+Mở đầu của việc pentest là "INTELLIGENCE GATHERING". Đây là bước không thể thiếu trong quá trình pentest. Việc có được các thông tin về mục tiêu kiểm thử giúp ta có thể giảm được thời gian lãng phí vào những system không mang lại lợi ích gì cho việc kiểm thử này. Nó giúp chúng ta xác định được scope của mục tiêu mà ta muốn kiểm thử.
+
+Whois Lookup
+Đây là một dịch vụ trên Internet để tra cứu tên miền. Khi sử dụng Whois, các thông tin này cần phải hiểu rõ:
+- Registart : Tên và và thông tin tổ chức đang phân phối tên miền
+- Registrant : Tên của người sở hữu tên miền
+- Contacts : Tên của người đăng ký/ chủ sở hữu/ người hỗ trợ kỹ thuật
+- Name Servers: Địa chỉ DNS Server được cấu hình trỏ về tên miền.
+- Domain Status: Tình trạng của tên miền.
+- Registration Date: Ngày đăng ký tên miền.
+- Updated Date: Lần cập nhật gần đây nhất.
+- Expiry Date: Ngày hết hạn tên miền.
+
+Bây giờ mình sẽ bắt tay vào giải một bài CTF liên quan đến whois để có thể hiểu rõ hơn:
+Link CTF : https://ctftime.org/task/20921
+Sau khi đọc nội dung của Task, task này yêu cầu tôi tìm tên người đăng ký domain này. Vì thế tôi sẽ sử dụng whois để tra cứu:
+whois + tên_miền, kết quả trả lại cho tôi một cờ Flag nằm ở Registrant Name : flag{}
+
+NSLookup
